@@ -7,7 +7,7 @@ function clear( varargin )
 % Syntax madness... o_O
 %
 % It feels fundamentally wrong that MATLAB's clear() assumes
-% that 'no input' == 'everything'. This function is the workaround, effective only
+% that 'no input' == 'everything'. This function is the workaround, but effective only
 % for interactive calls. I would like to apply this to script calls, too, but
 % this breaks a lot of matlab's own code.
 %
@@ -39,7 +39,7 @@ function clear( varargin )
 % This relies on undocumented MATLAB/JAVA code to get the last command from
 % the history. If the command fails (maybe very old or very new MATLAB),
 % this is caught by try/catch and clear behaves completely like the
-% builtin function. So, don't rely on it, just have it as a safety net!
+% builtin function. So, don't strictly rely on it, just have it as a safety net!
 %
 % Usage
 % =====
@@ -59,7 +59,6 @@ function clear( varargin )
 % of varargin.
 % So this function ends up a bit messy but it's about the least-messy way
 % I could figure.
-
 
 if isempty( varargin )
 
@@ -96,7 +95,7 @@ if isempty( varargin )
                         'Type ''YeS'' without the quotes:\n' ], 's');
 
         if ~strcmp( wish, 'YeS' )
-            fprintf( '''YeS'' =|= ''%s'', so good luck, we saved your workspace.\n', wish )
+            fprintf( '''YeS'' =|= ''%s'', so congratulations, we saved your workspace.\n', wish )
             return
         end
     end
