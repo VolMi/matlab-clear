@@ -42,7 +42,7 @@ this is caught by try/catch and clear behaves completely like the
 builtin function. So, don't rely on it, just have it as a safety net!
 
 Usage
-=====
+-----
       Save this m-file anywhere in your matlab path such that it has
       precedence over the builtin implementation. That is, make sure
       that
