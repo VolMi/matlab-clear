@@ -48,3 +48,5 @@ Usage
       that
           >> which clear
       returns the path to this file.
+
+This is [Filexchange #50092](http://www.mathworks.com/matlabcentral/fileexchange/50092)
